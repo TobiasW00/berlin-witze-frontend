@@ -1,0 +1,39 @@
+.registeruserbox
+{
+    padding:20px;
+    border: solid red;  
+    border-radius: 15px;
+    width:600px;
+}
+
+.registerform
+{
+    height:85vh;
+    padding:20px;
+    box-sizing: border-box;
+}
+
+.registerform input
+{
+    margin:5px;
+    width:100%;
+}
+.registerform input[type="checkbox"] {
+    display: inline;
+    width: 20px;
+}
+.likefield
+{
+    border:solid 2px red;
+    padding:10px;
+    background:#f8f8f8;
+    width:300px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.likefield:hover
+{
+    background:red;
+    color:white;
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link  type="image/png" rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" sizes="192x192">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="theme-color" content="#FF0000"/>
+    <meta name="google-site-verification" content="9hp2Axv0cTOApE-3ES2jKsIdAd4LQdU1_hFrSdQCBcE" />
+   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <style>
+  .disclamerbox
+    {
+        position: fixed;
+        background: red;
+        color:white;
+        bottom: 25px;
+        width: 100%;
+        text-align: center;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="content"></div>
+  </body>
+  <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+
+function AnalyticsSetup()
+    {
+      if(localStorage.getItem("disclaimer")==="true")
+      {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-81359783-1';    
+      window.document.getElementsByTagName('head')[0].appendChild(script);
+
+          gtag('js', new Date());
+          gtag('config', 'UA-81359783-1', { 'send_page_view': false });
+      }else
+      {
+        var disclamerbox = document.createElement("div"); 
+        disclamerbox.className = "disclamerbox";
+        var newContent = document.createTextNode("Diese Seite verwendet Cookies. Einige von ihnen sind essenziell, während andere uns helfen, diese Website und Ihre Nutzung zu verbessern. "); 
+        let bt = document.createElement("button");
+        bt.innerText ="Ich akzeptiere";
+        bt.onclick= ()=>{localStorage.setItem("disclaimer","true");  document.body.removeChild(disclamerbox);AnalyticsSetup();}    
+        disclamerbox.appendChild(newContent); 
+        disclamerbox.appendChild(bt);
+        window.document.getElementsByTagName("body")[0].appendChild(disclamerbox); 
+      }
+    }
+    AnalyticsSetup();
+</script>
+  </html>

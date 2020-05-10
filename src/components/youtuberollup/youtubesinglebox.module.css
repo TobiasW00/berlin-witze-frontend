@@ -1,0 +1,69 @@
+.videopreviewbox {
+    width: 100%;
+    /* Optional */
+    position: relative;
+    margin-bottom: 2%;
+    color: black;
+    border:2px solid red;
+    border-radius: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .youtubeplaypicturebox
+  {
+      position: relative;
+      width: 100%;
+      height:0;
+  }
+  .videopreviewbox .youtubeplaypicturebox img
+  {
+    width:80px;
+    left:40%;
+    top:-180px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+
+
+
+.videopreviewbox  img
+{
+    width:100%;
+}
+.youtubecontainer
+{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    box-sizing: border-box;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.header
+{
+    background: red;
+    color:white;
+    padding:1%;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+.description
+{
+    padding: 10px;
+    font-size: 0.9em;
+    max-width:100%;
+
+}
+.videoclickimage
+{
+    cursor: pointer;
+}

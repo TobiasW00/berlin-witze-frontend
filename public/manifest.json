@@ -1,0 +1,15 @@
+{
+    "short_name": "Berlin Witze",
+    "name": "Berlin-Witze.de",
+    "icons": [
+      {
+        "src": "favicon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#ff0000",
+    "background_color": "#ffffff"
+  }

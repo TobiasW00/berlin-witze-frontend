@@ -1,0 +1,25 @@
+/*
+.tweetiframe
+{
+    width: 300px;
+    border:0;
+    height: calc(100vh - 200px);
+    display: block;
+    float: right;
+    margin-left: 30px;
+}
+*/
+.maincontent
+{
+    width:100%;
+}
+
+/*
+@media (max-width: 600px)
+    {
+        .tweetiframe
+            {
+                display: none;
+            }
+    }
+    */

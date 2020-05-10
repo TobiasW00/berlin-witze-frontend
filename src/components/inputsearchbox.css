@@ -1,0 +1,19 @@
+#searchbox input[type="text"] {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  margin-bottom: 10px;
+  box-sizing : border-box;
+}
+#searchbox input[type="text"]:focus,
+#searchbox input[type="text"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+#member_page #searchbox  , #date_page #searchbox
+{
+  margin:10px;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+}

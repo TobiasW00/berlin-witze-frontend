@@ -1,0 +1,47 @@
+.dbconnectorbox
+{
+    text-align: center;    
+    font-size: 1em;
+    color:white;
+}
+@media(min-width:550px){
+  .dbconnectorbox
+  {
+    position:sticky;
+    top:78px;
+    z-index: 1200;
+  }
+  }
+.online
+{
+    background:green;
+}
+.offline
+{
+    animation: blinking 1s infinite;
+    background:red;
+}
+.connecting
+{
+    animation: blinkingconnect 1s infinite;
+}
+
+@keyframes blinkingconnect {
+    0%{
+      background-color: white;
+    }
+
+    100%{
+      background-color: green;
+    }
+  }
+
+  @keyframes blinkingoffline {
+    0%{
+      background-color: white;
+    }
+
+    100%{
+      background-color: red;
+    }
+  }
