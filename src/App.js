@@ -24,7 +24,8 @@ import DatabaseConnectort from './components/DatabaseConnector/databaseconnector
 import './App.css';
 
 function App(props) {	
-    return (      
+    return (    
+        <React.Suspense fallback={<div>Loading...</div>}>  
 <div>
       <div id="stdNavbar">
             <Helmet>
@@ -59,7 +60,7 @@ function App(props) {
 © 2020
 | <NavLink to="/impressum" >Impressum 	&amp; Datenschutz</NavLink>
 </div>
-</div>
+</div></React.Suspense>
     );
   }
 export default App;

@@ -40,13 +40,8 @@ function modcontext(filter,setFilter)
     function searchtext(text) {
             setFilter({...filter,searchtext:text}); 
     }
-    function dommale() {
-        setFilter({...filter,dommale:!filter.dommale}); 
-    }
-    function domfemale() {
-        setFilter({...filter,domfemale: !filter.domfemale}); 
-    }
-return {domfemale,dommale,searchtext,removeTag,selectTag};
+   
+return {searchtext,removeTag,selectTag};
 
 }
 

@@ -9,11 +9,20 @@ import MemberProvider from './provider/MemberContext';
 import TagsProvider from './provider/TagsContext';
 import FantasieFilterProvider from './provider/WitzeFilterContext';
 import FantasieProvider from './provider/WitzeContext';
-
 import MemberFilterProvider from './provider/MemberFilterContext';
 import WebsocketProvider from './provider/WebsocketContext';
-
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware ,compose } from "redux";
+import reducers from "./reducers";
+import thunk from 'redux-thunk';
 import { createBrowserHistory } from 'history';
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 
 
 if (process.env.NODE_ENV !== 'production') {
@@ -22,26 +31,36 @@ if (process.env.NODE_ENV !== 'production') {
 }
 export const history = createBrowserHistory();
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  reducers,
+  composeEnhancers(applyMiddleware(thunk))
+);
+
 render((
+  <Provider store={store}>
   <Router history={history}>
+  <RecoilRoot>
   <WebsocketProvider>
   <MemberFilterProvider>
   <FantasieFilterProvider>
   <MemberProvider>
   <FantasieProvider>
   <InboxProvider>
-  <TagsProvider>
+
   <UserProvider>
   <App />
   </UserProvider>
-  </TagsProvider>
+
   </InboxProvider>
   </FantasieProvider>
   </MemberProvider>
   </FantasieFilterProvider>
   </MemberFilterProvider>
   </WebsocketProvider>
+  </RecoilRoot>
   </Router>
+  </Provider>
 ), document.getElementById('content'));
 /*
 history.listen((location) => {

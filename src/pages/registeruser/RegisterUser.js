@@ -87,6 +87,8 @@ function RegisterUser(props){
             auf Berlin-Witze.de! Hier werden <NavLink to="/witze" >Witze</NavLink> geteilt und interessante Videos, Blogbeiträge, Podcasts über Berlin verlinkt.<br/>
             Als registriertes Mitglied kannst Du selbst einen Witz ver&ouml;ffentlichen.
 
+            <strong>Dies ist eine Testanwendung</strong>
+
 
             <h2>Registration auf berlin-witze.de</h2>
             <div className={styles.registeruserbox}>

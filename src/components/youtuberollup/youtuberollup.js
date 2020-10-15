@@ -18,6 +18,8 @@ function YouTubeRollup(){
 
       function loadVideos(youtubetoken)
       {
+       if(undefined ===youtubetoken)
+       return;
          let url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=PLLx5MjucpujXIbusv4yBTCZ49G7T97Ffj&key=AIzaSyD9wHTfl06YbkEd6lF6sLn-fYgMuy7sFtY'
         url = (youtubetoken.length===0) ? url : url + "&pageToken="  + youtubetoken;
             fetch(url)
